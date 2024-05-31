@@ -21,7 +21,7 @@ MonoBehaviour:
   - {fileID: 270207808234900523}
   StringsBanks:
   - {fileID: 1915118901291596210}
-  cacheTime: 638527791121999515
+  cacheTime: 638527907524227952
   cacheVersion: 131618
 --- !u!114 &270207808234900523
 MonoBehaviour:
@@ -38,7 +38,7 @@ MonoBehaviour:
   Path: ../FMOD/MicroJam-Ghost/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638527791121969493
+  lastModified: 638527907524227952
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -58,7 +58,7 @@ MonoBehaviour:
   Path: ../FMOD/MicroJam-Ghost/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638527791121999515
+  lastModified: 638527907524227952
   FileSizes:
   - Name: Desktop
     Value: 712
