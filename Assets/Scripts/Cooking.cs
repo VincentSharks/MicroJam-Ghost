@@ -33,7 +33,7 @@ public class Cooking : MonoBehaviour, IBeginDragHandler, IDragHandler, IDropHand
                 Debug.Log("Cooked");
                 CookedLvl = CookedLevel.Cooked;
             }
-            else if (_cookingTimer > _cookingTimer + _cookingTolerance)
+            else if (_cookingTimer > _cookingTime + _cookingTolerance)
             {
                 Debug.Log("overCooked");
                 CookedLvl = CookedLevel.OverCooked;
@@ -49,7 +49,7 @@ public class Cooking : MonoBehaviour, IBeginDragHandler, IDragHandler, IDropHand
         {
             IngredientsInPot.Add(name);
         }
-        else if (IngredientsInPot.Count >= GameManager.Instance.ActiveCustomer.IngredientsCount -1)
+        if (IngredientsInPot.Count >= GameManager.Instance.ActiveCustomer.IngredientsCount)
         {
             _cookingTimer = 0;
             _cooking = true;
@@ -81,8 +81,6 @@ public class Cooking : MonoBehaviour, IBeginDragHandler, IDragHandler, IDropHand
             {
                 _cooking = true;
             }
-
-            Debug.Log(hit.collider.gameObject.name);
         }
         else
         {

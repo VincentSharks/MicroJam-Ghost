@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler, IDropHandler
 {
     private Vector3 _originalPos;
+    [SerializeField] private AnimationClip _dropAnimation;
 
     private void Awake()
     {
@@ -42,10 +43,28 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
 
         if (hit.collider != null)
         {
+            StartCoroutine(PlayAnimation());
+
             if (hit.collider.gameObject.GetComponent<Cooking>() != null) hit.collider.gameObject.GetComponent<Cooking>().OnIngredientDropped(this.gameObject.name);
 
-            //Debug.Log(hit.collider.gameObject.name);
+            
         }
         transform.localPosition = _originalPos;
+    }
+
+    private IEnumerator PlayAnimation()
+    {
+        var animator = GetComponent<Animator>();
+
+        if (animator != null)
+        {
+            animator.enabled = true;
+
+            yield return new WaitForSeconds(_dropAnimation.length);
+
+            animator.enabled = false;
+
+            transform.localPosition = _originalPos;
+        }
     }
 }
