@@ -17,6 +17,6 @@ public class OrderSlot : MonoBehaviour
 
         VisualRenderer.sprite = OrderVisuals[randomIdx];
         VisualRenderer.enabled = true;
-        TagText.text = customer.ExplanationText;
+        TagText.text = customer.CategoryText;
     }
 }

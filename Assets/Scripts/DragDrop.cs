@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using FMODUnity;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler, IDropHandler
 {
     private Vector3 _originalPos;
-    [SerializeField] private AnimationClip _dropAnimation;
+    [SerializeField] private Animation _dropAnimation;
+    [SerializeField] StudioEventEmitter _waterSplashEmitter;
+    private bool interactible = true;
 
     private void Awake()
     {
@@ -22,8 +25,11 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
     {
         Debug.Log("ondrag");
 
-        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-        transform.Translate(mousePosition);
+        if (interactible && !GameManager.Instance.Cooking.IsCooking)
+        {
+            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+            transform.Translate(mousePosition);
+        }
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -43,28 +49,23 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
 
         if (hit.collider != null)
         {
-            StartCoroutine(PlayAnimation());
-
             if (hit.collider.gameObject.GetComponent<Cooking>() != null) hit.collider.gameObject.GetComponent<Cooking>().OnIngredientDropped(this.gameObject.name);
 
-            
+            StartCoroutine(PlayAnimation());
         }
         transform.localPosition = _originalPos;
     }
 
     private IEnumerator PlayAnimation()
     {
-        var animator = GetComponent<Animator>();
+        _dropAnimation.Play();
+        interactible = false;
 
-        if (animator != null)
-        {
-            animator.enabled = true;
+        yield return new WaitForSeconds(_dropAnimation.clip.length);
 
-            yield return new WaitForSeconds(_dropAnimation.length);
-
-            animator.enabled = false;
-
-            transform.localPosition = _originalPos;
-        }
+        interactible = true;
+        _waterSplashEmitter.Play();
+        _dropAnimation.Stop();
+        transform.localPosition = _originalPos;
     }
 }

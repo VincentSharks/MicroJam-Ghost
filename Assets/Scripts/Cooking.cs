@@ -1,11 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using FMODUnity;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-public class Cooking : MonoBehaviour, IBeginDragHandler, IDragHandler, IDropHandler
-{
-    private bool _cooking;
+public class Cooking : MonoBehaviour, IBeginDragHandler, IDragHandler, IDropHandler 
+{ 
+    public bool IsCooking = false;
     private float _cookingTime = 10f;
     private float _cookingTimer = 0;
     private float _cookingTolerance = 5f;
@@ -13,7 +16,12 @@ public class Cooking : MonoBehaviour, IBeginDragHandler, IDragHandler, IDropHand
     public List<string> IngredientsInPot = new List<string>();
     public CookedLevel CookedLvl;
 
+    public List<Sprite> StoveLights;
+    public List<Image> StoveLightImages;
+
     private Vector3 _originalPos;
+
+    [SerializeField] private StudioEventEmitter _boilingEmitter;
 
     private void Awake()
     {
@@ -22,7 +30,7 @@ public class Cooking : MonoBehaviour, IBeginDragHandler, IDragHandler, IDropHand
 
     private void Update()
     {
-        if (_cooking)
+        if (IsCooking)
         {
             Debug.Log("Cooking");
             _cookingTimer += Time.deltaTime;
@@ -38,12 +46,40 @@ public class Cooking : MonoBehaviour, IBeginDragHandler, IDragHandler, IDropHand
                 Debug.Log("overCooked");
                 CookedLvl = CookedLevel.OverCooked;
             }
+
+            var oneThird = _cookingTime * 0.33f;
+            var twoThirds = _cookingTime * .66f;
+
+            if (_cookingTimer > 0 && _cookingTimer <= oneThird) StoveLightImages[0].sprite = StoveLights[1];
+            else if (_cookingTimer > oneThird && _cookingTimer <= twoThirds) StoveLightImages[1].sprite = StoveLights[1];
+            else if (_cookingTimer > twoThirds && _cookingTimer <= _cookingTime) StoveLightImages[2].sprite = StoveLights[1];
+            else if (_cookingTimer >= _cookingTime && _cookingTimer < _cookingTime + _cookingTolerance/2)
+            {
+                for (int i = 0; i < StoveLightImages.Count; i++)
+                {
+                    StoveLightImages[i].sprite = StoveLights[0];
+                }
+            }
+            else if (_cookingTimer >= _cookingTime + _cookingTolerance / 2 && _cookingTimer < _cookingTime + _cookingTolerance)
+            {
+                for (int i = 0; i < StoveLightImages.Count; i++)
+                {
+                    StoveLightImages[i].sprite = StoveLights[2];
+                }
+            }
+            else if (_cookingTimer >= _cookingTime + _cookingTolerance)
+            {
+                for (int i = 0; i < StoveLightImages.Count; i++)
+                {
+                    StoveLightImages[i].sprite = StoveLights[3];
+                }
+            }
         }
     }
 
     public void OnIngredientDropped(string name)
     {
-        if (_cooking) return;
+        if (IsCooking) return;
 
         if (IngredientsInPot.Count < GameManager.Instance.ActiveCustomer.IngredientsCount)
         {
@@ -52,13 +88,17 @@ public class Cooking : MonoBehaviour, IBeginDragHandler, IDragHandler, IDropHand
         if (IngredientsInPot.Count >= GameManager.Instance.ActiveCustomer.IngredientsCount)
         {
             _cookingTimer = 0;
-            _cooking = true;
+            IsCooking = true;
+            _boilingEmitter.Play();
+            this.gameObject.layer = 0;
         }
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        _cooking = false;
+        IsCooking = false;
+        _boilingEmitter.Stop();
+        this.gameObject.layer = 2;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -76,17 +116,37 @@ public class Cooking : MonoBehaviour, IBeginDragHandler, IDragHandler, IDropHand
             if (hit.collider.gameObject.GetComponent<Dish>() != null)
             {
                 hit.collider.gameObject.GetComponent<Dish>().OnCookingPotDropped(IngredientsInPot, CookedLvl);
+                IsCooking = false;
+                _boilingEmitter.Stop();
+                this.gameObject.layer = 0;
             }
             else
             {
-                _cooking = true;
+                IsCooking = true;
+                _boilingEmitter.Play();
+                this.gameObject.layer = 0;
             }
         }
         else
         {
-            _cooking = true;
+            IsCooking = true;
+            _boilingEmitter.Play();
+            this.gameObject.layer = 0;
         }
         transform.localPosition = _originalPos;
+    }
+
+    public void ResetValues()
+    {
+        IngredientsInPot = new List<string>();
+        _cookingTimer = 0;
+        IsCooking = false;
+        CookedLvl = CookedLevel.UnderCooked;
+
+        foreach(var light in StoveLightImages)
+        {
+            light.sprite = StoveLights[0];
+        }
     }
 }
 

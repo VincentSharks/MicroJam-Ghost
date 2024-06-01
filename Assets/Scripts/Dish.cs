@@ -9,6 +9,14 @@ public class Dish : MonoBehaviour
 
     public void OnCookingPotDropped(List<string> ingredientsInPot, CookedLevel cookedLvl)
     {
-        
+        Ingredients = ingredientsInPot;
+        CookedLevel = cookedLvl;
+        //update texture visual
+    }
+
+    public void ResetValues()
+    {
+        Ingredients.Clear();
+        CookedLevel = CookedLevel.UnderCooked;
     }
 }
