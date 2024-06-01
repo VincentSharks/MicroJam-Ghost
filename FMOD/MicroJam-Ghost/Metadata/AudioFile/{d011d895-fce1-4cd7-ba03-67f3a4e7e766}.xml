@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{d011d895-fce1-4cd7-ba03-67f3a4e7e766}">
+		<property name="assetPath">
+			<value>Vintage Radio Switch Turn On Sound Effect.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>12.936</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{df35fa11-93e9-4ba0-88a8-4a65fe9f6d8d}</destination>
+		</relationship>
+	</object>
+</objects>

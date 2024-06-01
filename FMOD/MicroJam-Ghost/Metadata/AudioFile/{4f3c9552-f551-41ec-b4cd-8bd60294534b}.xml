@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{4f3c9552-f551-41ec-b4cd-8bd60294534b}">
+		<property name="assetPath">
+			<value>Radio Tuning Sound Effect HD .mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>19.32</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{df35fa11-93e9-4ba0-88a8-4a65fe9f6d8d}</destination>
+		</relationship>
+	</object>
+</objects>

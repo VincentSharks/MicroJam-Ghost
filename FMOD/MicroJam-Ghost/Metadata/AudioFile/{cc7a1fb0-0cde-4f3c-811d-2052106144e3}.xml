@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{cc7a1fb0-0cde-4f3c-811d-2052106144e3}">
+		<property name="assetPath">
+			<value>BOILING WATER SOUND EFFECT.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>37.200000000000003</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{df35fa11-93e9-4ba0-88a8-4a65fe9f6d8d}</destination>
+		</relationship>
+	</object>
+</objects>

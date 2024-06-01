@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{e7059cfe-1003-4c3d-8fd1-bae0dedf9fc5}">
+		<property name="assetPath">
+			<value>Hotel bell ringing Sounds effect.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>4.1520000000000001</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{df35fa11-93e9-4ba0-88a8-4a65fe9f6d8d}</destination>
+		</relationship>
+	</object>
+</objects>
