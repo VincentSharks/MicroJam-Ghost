@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     public Cooking Cooking;
     public int SoulsEarned;
 
+    [SerializeField] private Animation _serveDish;
+
     public static GameManager Instance { get; private set; }
 
     private void Awake()
@@ -28,6 +30,8 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("bell clicked");
 
+        if (Dish.Ingredients.Count != ActiveCustomer.IngredientsCount) return; 
+
         foreach(var ingredient in Dish.Ingredients)
         {
             if (ActiveCustomer.Likes.ContainsKey(ingredient)) SoulsEarned += 20;
@@ -42,10 +46,9 @@ public class GameManager : MonoBehaviour
 
         //pop up saying u earned this many souls
         //update display current souls count
-
+        _serveDish.Play();
         Cooking.ResetValues();
         Dish.ResetValues();
         ActiveCustomer = CustomerManager.GenerateOrder();
-        
     }
 }

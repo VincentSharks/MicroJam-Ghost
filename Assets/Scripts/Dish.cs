@@ -11,6 +11,7 @@ public class Dish : MonoBehaviour
     {
         Ingredients = ingredientsInPot;
         CookedLevel = cookedLvl;
+
         //update texture visual
     }
 
