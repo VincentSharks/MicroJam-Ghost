@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class OrderSlot : MonoBehaviour
 {
-    public TextMeshProUGUI TagText;
+    public Text TagText;
     public SpriteRenderer VisualRenderer;
     public Tag Tag;
 
@@ -17,6 +17,5 @@ public class OrderSlot : MonoBehaviour
 
         VisualRenderer.sprite = OrderVisuals[randomIdx];
         VisualRenderer.enabled = true;
-        TagText.text = customer.CategoryText;
     }
 }

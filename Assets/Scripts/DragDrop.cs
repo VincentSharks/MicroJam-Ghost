@@ -19,13 +19,14 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
     public void OnBeginDrag(PointerEventData eventData)
     {
         Debug.Log("begindrag");
+        this.gameObject.layer = 2;
     }
 
     public void OnDrag(PointerEventData eventData)
     {
         Debug.Log("ondrag");
 
-        if (interactible && !GameManager.Instance.Cooking.IsCooking && GameManager.Instance.GameStarted)
+        if (interactible && !GameManager.Instance.Cooking.IsCooking && GameManager.Instance.Dish.Ingredients.Count == 0 && GameManager.Instance.GameStarted)
         {
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
             transform.Translate(mousePosition);
@@ -35,12 +36,6 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
     public void OnEndDrag(PointerEventData eventData)
     {
         Debug.Log("enddrag");
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector3.back);
-
-        if (hit.collider != null)
-        {
-            Debug.Log(hit.collider.gameObject.name);
-        }
     }
 
     public void OnDrop(PointerEventData eventData)
@@ -49,11 +44,15 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
 
         if (hit.collider != null)
         {
-            if (hit.collider.gameObject.GetComponent<Cooking>() != null) hit.collider.gameObject.GetComponent<Cooking>().OnIngredientDropped(this.gameObject.name);
+            if (hit.collider.gameObject.GetComponent<Cooking>() != null)
+            {
+                hit.collider.gameObject.GetComponent<Cooking>().OnIngredientDropped(this.gameObject.name);
 
-            StartCoroutine(PlayAnimation());
+                StartCoroutine(PlayAnimation());
+            }
         }
         transform.localPosition = _originalPos;
+        this.gameObject.layer = 0;
     }
 
     private IEnumerator PlayAnimation()
