@@ -25,7 +25,7 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
     {
         Debug.Log("ondrag");
 
-        if (interactible && !GameManager.Instance.Cooking.IsCooking)
+        if (interactible && !GameManager.Instance.Cooking.IsCooking && GameManager.Instance.GameStarted)
         {
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
             transform.Translate(mousePosition);

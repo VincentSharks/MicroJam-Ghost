@@ -12,7 +12,10 @@ public class GameManager : MonoBehaviour
     public Cooking Cooking;
     public int SoulsEarned;
 
+    public bool GameStarted;
+
     [SerializeField] private Animation _serveDish;
+    [SerializeField] private GameObject MainMenuUiObj;
 
     public static GameManager Instance { get; private set; }
 
@@ -21,15 +24,20 @@ public class GameManager : MonoBehaviour
         Instance = this;
     }
 
-    void Start()
+    public void StartGame()
     {
+        MainMenuUiObj.SetActive(false);
+        
         ActiveCustomer = CustomerManager.GenerateOrder();
+        GameStarted = true;
     }
 
     public void OnBellClicked()
     {
+
         Debug.Log("bell clicked");
 
+        if (!GameStarted) return;
         if (Dish.Ingredients.Count != ActiveCustomer.IngredientsCount) return; 
 
         foreach(var ingredient in Dish.Ingredients)

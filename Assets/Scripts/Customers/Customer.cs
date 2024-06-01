@@ -9,18 +9,4 @@ public class Customer: MonoBehaviour
     public Dictionary<string, bool> Likes = new Dictionary<string, bool>(); //name of ingredient + revealed or not
     public Dictionary<string, bool> Dislikes = new Dictionary<string, bool>();  //name of ingredient + revealed or not 
     public int IngredientsCount;
-
-    //public GameObject OrderObjPrefab;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

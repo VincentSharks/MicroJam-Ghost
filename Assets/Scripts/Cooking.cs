@@ -96,6 +96,8 @@ public class Cooking : MonoBehaviour, IBeginDragHandler, IDragHandler, IDropHand
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        if (!GameManager.Instance.GameStarted) return;
+
         IsCooking = false;
         _boilingEmitter.Stop();
         this.gameObject.layer = 2;
@@ -103,12 +105,16 @@ public class Cooking : MonoBehaviour, IBeginDragHandler, IDragHandler, IDropHand
 
     public void OnDrag(PointerEventData eventData)
     {
+        if (!GameManager.Instance.GameStarted) return;
+
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         transform.Translate(mousePosition);
     }
 
     public void OnDrop(PointerEventData eventData)
     {
+        if (!GameManager.Instance.GameStarted) return;
+
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector3.back);
 
         if (hit.collider != null)
