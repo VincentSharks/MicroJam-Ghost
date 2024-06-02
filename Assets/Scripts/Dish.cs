@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class Dish : MonoBehaviour
 {
-    public List<string> Ingredients = new List<string>();
+    public List<string> Ingredients;
     public CookedLevel CookedLevel;
 
     public List<Sprite> _dishVariations;
 
     public void OnCookingPotDropped(List<string> ingredientsInPot, CookedLevel cookedLvl)
     {
-        Ingredients = ingredientsInPot;
+        Ingredients = new List<string>();
+        Ingredients.AddRange(ingredientsInPot);
         CookedLevel = cookedLvl;
 
         var randomidx = Random.Range(1, _dishVariations.Count);

@@ -1,88 +1,64 @@
 fileFormatVersion: 2
-guid: a03a1f3b95f9bb14f9d636bf59670a53
+guid: 989f1e142c234ac4a8be4b620d111d33
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4811676516357743166
-    second: Props2_0
+      213: -2543161278166403486
+    second: Smoke-Sheet_0
   - first:
-      213: 6390338005821300509
-    second: Props2_1
+      213: 1766479549413275427
+    second: Smoke-Sheet_1
   - first:
-      213: 8825010496184208497
-    second: Props2_2
+      213: 4336332254551780690
+    second: Smoke-Sheet_2
   - first:
-      213: -6311199185241592611
-    second: Props2_3
+      213: 6432433507561761962
+    second: Smoke-Sheet_3
   - first:
-      213: 5878939081760405796
-    second: Props2_4
+      213: -6472314962850084079
+    second: Smoke-Sheet_4
   - first:
-      213: -6439660118187253327
-    second: Props2_5
+      213: -6609715708236462014
+    second: Smoke-Sheet_5
   - first:
-      213: 4208212924717799472
-    second: Props2_6
+      213: 8485226879849734376
+    second: Smoke-Sheet_6
   - first:
-      213: 3940102514807667047
-    second: Props2_7
+      213: 2822393289567481482
+    second: Smoke-Sheet_7
   - first:
-      213: 9062588299739165790
-    second: Props2_8
+      213: 3626580871177048845
+    second: Smoke-Sheet_8
   - first:
-      213: -7562488980126177536
-    second: Props2_9
+      213: -4010838192083360006
+    second: Smoke-Sheet_9
   - first:
-      213: 2670428221378085948
-    second: Props2_10
+      213: 4847449252301338634
+    second: Smoke-Sheet_10
   - first:
-      213: -6574377120211562698
-    second: Props2_11
+      213: 244294957330874907
+    second: Smoke-Sheet_11
   - first:
-      213: -8784031963195010968
-    second: Props2_12
+      213: -6387356068850723492
+    second: Smoke-Sheet_12
   - first:
-      213: 8816674215656331558
-    second: Props2_13
+      213: -7709437000002807976
+    second: Smoke-Sheet_13
   - first:
-      213: -517971108770225248
-    second: Props2_14
+      213: 1465173667340834072
+    second: Smoke-Sheet_14
   - first:
-      213: -7454262321780817864
-    second: Props2_15
+      213: -6333558172386207623
+    second: Smoke-Sheet_15
   - first:
-      213: -1081244779449595564
-    second: Props2_16
+      213: 7493115825681772125
+    second: Smoke-Sheet_16
   - first:
-      213: 3844980468743334803
-    second: Props2_17
+      213: -1176195206081263391
+    second: Smoke-Sheet_17
   - first:
-      213: -2343535130393337880
-    second: Props2_18
-  - first:
-      213: 4127509614337629621
-    second: Props2_19
-  - first:
-      213: -6413661923488406772
-    second: Props2_20
-  - first:
-      213: 7521554389742301232
-    second: Props2_21
-  - first:
-      213: -3084325861918678887
-    second: Props2_22
-  - first:
-      213: 2545666049691574624
-    second: Props2_23
-  - first:
-      213: -792204223760784209
-    second: Props2_24
-  - first:
-      213: 7464151700608201243
-    second: Props2_25
-  - first:
-      213: 8547466600392462060
-    second: Props2_26
+      213: -1699905747591448649
+    second: Smoke-Sheet_18
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -113,7 +89,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -149,7 +125,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -161,7 +137,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -173,7 +149,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -185,7 +161,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -196,13 +172,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Props2_0
+      name: Smoke-Sheet_0
       rect:
         serializedVersion: 2
-        x: 23
-        y: 740
-        width: 55
-        height: 34
+        x: 0
+        y: 320
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,20 +186,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e32a79b5c4286c240800000000000000
-      internalID: 4811676516357743166
+      spriteID: 266fc50ba40e4bcd0800000000000000
+      internalID: -2543161278166403486
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Props2_1
+      name: Smoke-Sheet_1
       rect:
         serializedVersion: 2
-        x: 103
-        y: 740
-        width: 91
-        height: 59
+        x: 80
+        y: 320
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,20 +207,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1f18af0f8a0fa850800000000000000
-      internalID: 6390338005821300509
+      spriteID: 32735cd7acbc38810800000000000000
+      internalID: 1766479549413275427
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Props2_2
+      name: Smoke-Sheet_2
       rect:
         serializedVersion: 2
-        x: 222
-        y: 740
-        width: 55
-        height: 55
+        x: 160
+        y: 320
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -252,20 +228,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17c47241a4cb87a70800000000000000
-      internalID: 8825010496184208497
+      spriteID: 25da0ace53fbd2c30800000000000000
+      internalID: 4336332254551780690
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Props2_3
+      name: Smoke-Sheet_3
       rect:
         serializedVersion: 2
-        x: 322
-        y: 741
-        width: 55
-        height: 55
+        x: 240
+        y: 320
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -273,377 +249,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ddca0f877cd1a68a0800000000000000
-      internalID: -6311199185241592611
+      spriteID: aace983d138944950800000000000000
+      internalID: 6432433507561761962
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Props2_4
+      name: Smoke-Sheet_4
       rect:
         serializedVersion: 2
-        x: 422
-        y: 741
-        width: 55
-        height: 55
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4297d7862ff269150800000000000000
-      internalID: 5878939081760405796
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Props2_5
-      rect:
-        serializedVersion: 2
-        x: 522
-        y: 741
-        width: 55
-        height: 55
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1b1e235cd3bb1a6a0800000000000000
-      internalID: -6439660118187253327
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Props2_6
-      rect:
-        serializedVersion: 2
-        x: 644
-        y: 740
-        width: 110
-        height: 97
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0381305eb53966a30800000000000000
-      internalID: 4208212924717799472
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Props2_7
-      rect:
-        serializedVersion: 2
-        x: 23
-        y: 640
-        width: 55
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 769fbb59c5e0ea630800000000000000
-      internalID: 3940102514807667047
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Props2_8
-      rect:
-        serializedVersion: 2
-        x: 122
-        y: 640
-        width: 55
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e54709ffa08c4cd70800000000000000
-      internalID: 9062588299739165790
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Props2_9
-      rect:
-        serializedVersion: 2
-        x: 222
-        y: 640
-        width: 55
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 007e5c12754ac0790800000000000000
-      internalID: -7562488980126177536
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Props2_10
-      rect:
-        serializedVersion: 2
-        x: 322
-        y: 640
-        width: 55
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c344b6d91544f0520800000000000000
-      internalID: 2670428221378085948
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Props2_11
-      rect:
-        serializedVersion: 2
-        x: 447
-        y: 640
-        width: 106
-        height: 55
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 63f855a77de13c4a0800000000000000
-      internalID: -6574377120211562698
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Props2_12
-      rect:
-        serializedVersion: 2
-        x: 612
-        y: 639
-        width: 176
-        height: 76
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 86095122879d81680800000000000000
-      internalID: -8784031963195010968
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Props2_13
-      rect:
-        serializedVersion: 2
-        x: 10
-        y: 440
-        width: 180
-        height: 132
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6299a848c7e1b5a70800000000000000
-      internalID: 8816674215656331558
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Props2_14
-      rect:
-        serializedVersion: 2
-        x: 220
-        y: 558
-        width: 160
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0a3e5d9550ccfc8f0800000000000000
-      internalID: -517971108770225248
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Props2_15
-      rect:
-        serializedVersion: 2
-        x: 410
-        y: 440
-        width: 174
-        height: 154
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8300da7a9e32d8890800000000000000
-      internalID: -7454262321780817864
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Props2_16
-      rect:
-        serializedVersion: 2
-        x: 635
-        y: 440
-        width: 130
-        height: 171
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 45949ad0a95aef0f0800000000000000
-      internalID: -1081244779449595564
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Props2_17
-      rect:
-        serializedVersion: 2
-        x: 248
-        y: 440
-        width: 106
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 39be2cf5d5d1c5530800000000000000
-      internalID: 3844980468743334803
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Props2_18
-      rect:
-        serializedVersion: 2
-        x: 248
-        y: 340
-        width: 106
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8ef914a27371a7fd0800000000000000
-      internalID: -2343535130393337880
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Props2_19
-      rect:
-        serializedVersion: 2
-        x: 415
-        y: 240
-        width: 170
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5bd9a91302cd74930800000000000000
-      internalID: 4127509614337629621
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Props2_20
-      rect:
-        serializedVersion: 2
-        x: 665
-        y: 340
-        width: 63
-        height: 75
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c03660d26781ef6a0800000000000000
-      internalID: -6413661923488406772
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Props2_21
-      rect:
-        serializedVersion: 2
-        x: 60
+        x: 0
         y: 240
         width: 80
-        height: 100
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -651,20 +270,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 030be57dddde16860800000000000000
-      internalID: 7521554389742301232
+      spriteID: 11b00e445d7bd26a0800000000000000
+      internalID: -6472314962850084079
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Props2_22
+      name: Smoke-Sheet_5
       rect:
         serializedVersion: 2
-        x: 248
+        x: 80
         y: 240
-        width: 106
-        height: 60
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -672,20 +291,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99069c458f54235d0800000000000000
-      internalID: -3084325861918678887
+      spriteID: 2480f3845929544a0800000000000000
+      internalID: -6609715708236462014
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Props2_23
+      name: Smoke-Sheet_6
       rect:
         serializedVersion: 2
-        x: 665
+        x: 160
         y: 240
-        width: 63
-        height: 75
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -693,20 +312,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06163a0e8c5045320800000000000000
-      internalID: 2545666049691574624
+      spriteID: 8e02a0cf3e491c570800000000000000
+      internalID: 8485226879849734376
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Props2_24
+      name: Smoke-Sheet_7
       rect:
         serializedVersion: 2
-        x: 12
-        y: 65
-        width: 376
-        height: 145
+        x: 240
+        y: 240
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -714,20 +333,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa4ac2da4768105f0800000000000000
-      internalID: -792204223760784209
+      spriteID: a8ead114eb72b2720800000000000000
+      internalID: 2822393289567481482
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Props2_25
+      name: Smoke-Sheet_8
       rect:
         serializedVersion: 2
-        x: 414
-        y: 41
-        width: 165
-        height: 188
+        x: 0
+        y: 160
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -735,20 +354,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b123168cc6ef59760800000000000000
-      internalID: 7464151700608201243
+      spriteID: d031cbf7614345230800000000000000
+      internalID: 3626580871177048845
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Props2_26
+      name: Smoke-Sheet_9
       rect:
         serializedVersion: 2
-        x: 689
-        y: 41
-        width: 25
-        height: 120
+        x: 80
+        y: 160
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -756,8 +375,197 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cee88ed2693be9670800000000000000
-      internalID: 8547466600392462060
+      spriteID: af62d452ae3a658c0800000000000000
+      internalID: -4010838192083360006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smoke-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a08772e7969954340800000000000000
+      internalID: 4847449252301338634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smoke-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b12402828f8e36300800000000000000
+      internalID: 244294957330874907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smoke-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c55973e3f7d8b57a0800000000000000
+      internalID: -6387356068850723492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smoke-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 857549415e3920590800000000000000
+      internalID: -7709437000002807976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smoke-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8155b1800b7555410800000000000000
+      internalID: 1465173667340834072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smoke-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 978d5aa166eaa18a0800000000000000
+      internalID: -6333558172386207623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smoke-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5eae9aa425ecf760800000000000000
+      internalID: 7493115825681772125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smoke-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e8420b11b05dafe0800000000000000
+      internalID: -1176195206081263391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smoke-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b7ba23aab8b868e0800000000000000
+      internalID: -1699905747591448649
       vertices: []
       indices: 
       edges: []

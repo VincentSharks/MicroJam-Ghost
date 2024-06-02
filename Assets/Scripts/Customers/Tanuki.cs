@@ -6,6 +6,7 @@ public class Tanuki : Customer
 {
     private void Awake()
     {
+        Name = "Dake-Banuki";
         IngredientsCount = 5;
 
         Likes = new Dictionary<string, bool>();

@@ -6,6 +6,7 @@ public class Ghoul : Customer
 {
     private void Awake()
     {
+        Name = "Ghoul";
         IngredientsCount = 4;
 
         Likes = new Dictionary<string, bool>();
