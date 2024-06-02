@@ -87,7 +87,7 @@ public class Cooking : MonoBehaviour, IBeginDragHandler, IDragHandler, IDropHand
     {
         if (IsCooking) return;
 
-        PlaySplashFX();
+        StartCoroutine(PlaySplashFX());
 
         if (IngredientsInPot.Count < GameManager.Instance.ActiveCustomer.IngredientsCount)
         {
@@ -101,6 +101,8 @@ public class Cooking : MonoBehaviour, IBeginDragHandler, IDragHandler, IDropHand
             _boilingEmitter.Play();
             this.gameObject.layer = 0;
         }
+
+        GameManager.Instance.UpdateCookingIcon(name);
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -141,6 +143,8 @@ public class Cooking : MonoBehaviour, IBeginDragHandler, IDragHandler, IDropHand
                 _boilingFxObj.SetActive(false);
                 _boilingEmitter.Stop();
                 this.gameObject.layer = 0;
+
+                GameManager.Instance.DeleteCookingIcons();
             }
             else
             {
@@ -171,10 +175,13 @@ public class Cooking : MonoBehaviour, IBeginDragHandler, IDragHandler, IDropHand
         {
             light.sprite = StoveLights[0];
         }
+
+        GameManager.Instance.DeleteCookingIcons();
     }
 
-    private void PlaySplashFX()
+    private IEnumerator PlaySplashFX()
     {
+        yield return new WaitForSeconds(0.5f);
         var anim = _waterSplashFXObj.GetComponent<Animator>();
         anim.SetTrigger("ItemDropped");
     }
