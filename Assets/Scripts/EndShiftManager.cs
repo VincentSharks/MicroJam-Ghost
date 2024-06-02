@@ -15,9 +15,4 @@ public class EndShiftManager : MonoBehaviour
         _soulsEarnedShift.text = "souls earned during shift: " + soulsEarned.ToString();
         _soulsEarnedTotal.text = "total souls earned: " + totalSouls.ToString();
     }
-
-    public void QuitGame()
-    {
-        Application.OpenURL("https://itch.io/jam/micro-jam-015/rate/2745568");
-    }
 }

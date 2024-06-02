@@ -193,9 +193,9 @@ TextureImporter:
       name: KitchenShelves_3
       rect:
         serializedVersion: 2
-        x: 1615
-        y: 634
-        width: 305
+        x: 1617
+        y: 663
+        width: 303
         height: 71
       alignment: 0
       pivot: {x: 0, y: 0}

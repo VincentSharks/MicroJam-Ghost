@@ -17,6 +17,8 @@ public class Dish : MonoBehaviour
 
         var randomidx = Random.Range(1, _dishVariations.Count);
         GetComponent<SpriteRenderer>().sprite = _dishVariations[randomidx];
+
+        StartCoroutine(GameManager.Instance.ReminderAfter5Seconds());
     }
 
     public void ResetValues()

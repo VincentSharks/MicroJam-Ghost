@@ -16,6 +16,8 @@ public class InfoBook : MonoBehaviour
 
     public void NextPage()
     {
+        if (!GameManager.Instance.GameStarted) return;
+
         if (_currentPage == GameManager.Instance.CustomerManager.PossibleCustomers.Count-1) _currentPage = 0;
         else _currentPage++;
 
@@ -24,6 +26,8 @@ public class InfoBook : MonoBehaviour
 
     public void PreviousPage()
     {
+        if (!GameManager.Instance.GameStarted) return;
+
         if (_currentPage == 0) _currentPage = GameManager.Instance.CustomerManager.PossibleCustomers.Count-1;
         else _currentPage--;
 
