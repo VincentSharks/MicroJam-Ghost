@@ -13,6 +13,8 @@ public class Cooking : MonoBehaviour, IBeginDragHandler, IDragHandler, IDropHand
     private float _cookingTimer = 0;
     private float _cookingTolerance = 5f;
 
+    private bool _canPlayFoodDoneSFX = false;
+
     public List<string> IngredientsInPot = new List<string>();
     public CookedLevel CookedLvl;
 
@@ -26,6 +28,9 @@ public class Cooking : MonoBehaviour, IBeginDragHandler, IDragHandler, IDropHand
     private Vector3 _originalPos;
 
     [SerializeField] private StudioEventEmitter _boilingEmitter;
+    [SerializeField] private StudioEventEmitter _foodDoneEmitter;
+
+    [SerializeField] private Animator _cookingPotAnimator;
 
     private void Awake()
     {
@@ -59,6 +64,12 @@ public class Cooking : MonoBehaviour, IBeginDragHandler, IDragHandler, IDropHand
             else if (_cookingTimer > twoThirds && _cookingTimer <= _cookingTime) StoveLightImages[2].sprite = StoveLights[1];
             else if (_cookingTimer >= _cookingTime && _cookingTimer < _cookingTime + _cookingTolerance/2)
             {
+                if (!_canPlayFoodDoneSFX)
+                {
+                    _canPlayFoodDoneSFX = true;
+                    _foodDoneEmitter.Play();
+                } 
+                
                 for (int i = 0; i < StoveLightImages.Count; i++)
                 {
                     StoveLightImages[i].sprite = StoveLights[0];
@@ -97,6 +108,7 @@ public class Cooking : MonoBehaviour, IBeginDragHandler, IDragHandler, IDropHand
         {
             _cookingTimer = 0;
             IsCooking = true;
+            _cookingPotAnimator.SetBool("Cooking", true);
             _boilingFxObj.SetActive(true);
             _boilingEmitter.Play();
             this.gameObject.layer = 0;
@@ -113,6 +125,8 @@ public class Cooking : MonoBehaviour, IBeginDragHandler, IDragHandler, IDropHand
         splashRenderer.sprite = null;
 
         IsCooking = false;
+        _cookingPotAnimator.SetBool("Cooking", false);
+        _cookingPotAnimator.enabled = false;
         _boilingFxObj.SetActive(false);
         _fireFXObj.SetActive(false);
         _boilingEmitter.Stop();
@@ -137,18 +151,20 @@ public class Cooking : MonoBehaviour, IBeginDragHandler, IDragHandler, IDropHand
         {
             if (hit.collider.gameObject.GetComponent<Dish>() != null)
             {
-                hit.collider.gameObject.GetComponent<Dish>().OnCookingPotDropped(IngredientsInPot, CookedLvl);
+                hit.collider.gameObject.GetComponent<Dish>().OnCookingPotDropped(IngredientsInPot, CookedLvl, _boilingEmitter);
                 IngredientsInPot.Clear();
                 IsCooking = false;
+                _cookingPotAnimator.SetBool("Cooking", false);
                 _boilingFxObj.SetActive(false);
                 _boilingEmitter.Stop();
                 this.gameObject.layer = 0;
-
+                _canPlayFoodDoneSFX = false;
                 GameManager.Instance.DeleteCookingIcons();
             }
             else
             {
                 IsCooking = true;
+                _cookingPotAnimator.SetBool("Cooking", true);
                 _boilingFxObj.SetActive(true);
                 _boilingEmitter.Play();
                 this.gameObject.layer = 0;
@@ -157,11 +173,13 @@ public class Cooking : MonoBehaviour, IBeginDragHandler, IDragHandler, IDropHand
         else
         {
             IsCooking = true;
+            _cookingPotAnimator.SetBool("Cooking", true);
             _boilingFxObj.SetActive(true);
             _boilingEmitter.Play();
             this.gameObject.layer = 0;
         }
         transform.localPosition = _originalPos;
+        _cookingPotAnimator.enabled = true;
     }
 
     public void ResetValues()
@@ -169,6 +187,8 @@ public class Cooking : MonoBehaviour, IBeginDragHandler, IDragHandler, IDropHand
         IngredientsInPot = new List<string>();
         _cookingTimer = 0;
         IsCooking = false;
+        _cookingPotAnimator.enabled = true;
+        _cookingPotAnimator.SetBool("Cooking", false);
         CookedLvl = CookedLevel.UnderCooked;
 
         foreach(var light in StoveLightImages)

@@ -9,10 +9,16 @@ public class Radio : MonoBehaviour
     [SerializeField] private GameObject _audioObj;
     [SerializeField] private Image _speakerImg;
     [SerializeField] private List<Sprite> _speakerSprites;
+    [SerializeField] private Animation _radioClicked;
 
     private void Start()
     {
         ToggleAudioObj();
+    }
+
+    public void RadioClicked()
+    {
+        _radioClicked.Play();
     }
 
     public void ToggleAudioObj()

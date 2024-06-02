@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using FMODUnity;
 using UnityEngine;
 
 public class Dish : MonoBehaviour
@@ -9,11 +10,13 @@ public class Dish : MonoBehaviour
 
     public List<Sprite> _dishVariations;
 
-    public void OnCookingPotDropped(List<string> ingredientsInPot, CookedLevel cookedLvl)
+    public void OnCookingPotDropped(List<string> ingredientsInPot, CookedLevel cookedLvl, StudioEventEmitter _boilingEmitter)
     {
         Ingredients = new List<string>();
         Ingredients.AddRange(ingredientsInPot);
         CookedLevel = cookedLvl;
+
+        _boilingEmitter.Stop();
 
         var randomidx = Random.Range(1, _dishVariations.Count);
         GetComponent<SpriteRenderer>().sprite = _dishVariations[randomidx];

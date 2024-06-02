@@ -65,6 +65,9 @@ TextureImporter:
   - first:
       213: 6583364687338231458
     second: SpriteSheetProp2_20
+  - first:
+      213: -8155751013155375963
+    second: SpriteSheetProp2_21
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -614,6 +617,27 @@ TextureImporter:
       bones: []
       spriteID: 2a655af8d4fcc5b50800000000000000
       internalID: 6583364687338231458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheetProp2_21
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 99
+        width: 130
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a477502aa3f0de80800000000000000
+      internalID: -8155751013155375963
       vertices: []
       indices: 
       edges: []
