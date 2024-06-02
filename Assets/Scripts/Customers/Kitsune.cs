@@ -6,6 +6,7 @@ public class Kitsune : Customer
 {
     private void Awake()
     {
+        Name = "Kitsune";
         IngredientsCount = 5;
 
         Likes = new Dictionary<string, bool>();

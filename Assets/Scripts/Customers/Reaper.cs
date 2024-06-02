@@ -7,6 +7,7 @@ public class Reaper : Customer
 {
     private void Awake()
     {
+        Name = "Reaper";
         IngredientsCount = 4;
 
         Likes = new Dictionary<string, bool>();

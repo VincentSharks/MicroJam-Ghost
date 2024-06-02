@@ -17,19 +17,8 @@ public class CustomerManager : MonoBehaviour
 
         _activeCustomer = nextCustomer;
         OrderSlot.GenerateNewOrderVisual(nextCustomer);
+        GameManager.Instance.CurrentCustomerIdx++;
 
         return _activeCustomer;
-    }
-
-    void Start()
-    {
-        //_reaper.Likes["Bone"] = true;
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

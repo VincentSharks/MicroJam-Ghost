@@ -10,11 +10,15 @@ public class OrderSlot : MonoBehaviour
 
     public List<Sprite> OrderVisuals;
 
+    [SerializeField] private Animation _animation;
+
     public void GenerateNewOrderVisual(Customer customer)
     {
         var randomIdx = Random.Range(0, OrderVisuals.Count);
 
         VisualRenderer.sprite = OrderVisuals[randomIdx];
         VisualRenderer.enabled = true;
+
+        _animation.Play();
     }
 }

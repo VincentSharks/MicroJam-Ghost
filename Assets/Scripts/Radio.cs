@@ -2,14 +2,48 @@ using System.Collections;
 using System.Collections.Generic;
 using FMODUnity;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Radio : MonoBehaviour
 {
     [SerializeField] private GameObject _audioObj;
+    [SerializeField] private Image _speakerImg;
+    [SerializeField] private List<Sprite> _speakerSprites;
+
+    private void Start()
+    {
+        ToggleAudioObj();
+    }
 
     public void ToggleAudioObj()
     {
         StartCoroutine(Toggle());
+    }
+
+    public void PlayRadioAfterIntercom(StudioEventEmitter emitter)
+    {
+        StartCoroutine(PlayRadioWithDelay(emitter));
+    }
+
+    private IEnumerator PlayRadioWithDelay(StudioEventEmitter emitter)
+    {
+        StopRadio();
+        _speakerImg.sprite = _speakerSprites[0];
+
+        yield return new WaitForSeconds(46);
+
+        StartRadio();
+        _speakerImg.sprite = _speakerSprites[1];
+    }
+
+    public void StopRadio()
+    {
+        _audioObj.SetActive(false);
+    }
+
+    public void StartRadio()
+    {
+        _audioObj.SetActive(true);
     }
 
     private IEnumerator Toggle()
