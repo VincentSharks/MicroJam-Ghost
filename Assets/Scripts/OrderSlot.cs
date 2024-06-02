@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class OrderSlot : MonoBehaviour
 {
-    public Text TagText;
     public SpriteRenderer VisualRenderer;
     public Tag Tag;
 

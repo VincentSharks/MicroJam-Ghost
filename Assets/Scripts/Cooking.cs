@@ -30,7 +30,7 @@ public class Cooking : MonoBehaviour, IBeginDragHandler, IDragHandler, IDropHand
 
     private void Update()
     {
-        if (IsCooking)
+        if (IsCooking && IngredientsInPot.Count == GameManager.Instance.ActiveCustomer.IngredientsCount)
         {
             Debug.Log("Cooking");
             _cookingTimer += Time.deltaTime;
@@ -96,7 +96,7 @@ public class Cooking : MonoBehaviour, IBeginDragHandler, IDragHandler, IDropHand
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        if (!GameManager.Instance.GameStarted) return;
+        if (!GameManager.Instance.GameStarted || IngredientsInPot.Count != GameManager.Instance.ActiveCustomer.IngredientsCount) return;
 
         IsCooking = false;
         _boilingEmitter.Stop();
@@ -105,7 +105,7 @@ public class Cooking : MonoBehaviour, IBeginDragHandler, IDragHandler, IDropHand
 
     public void OnDrag(PointerEventData eventData)
     {
-        if (!GameManager.Instance.GameStarted) return;
+        if (!GameManager.Instance.GameStarted || IngredientsInPot.Count != GameManager.Instance.ActiveCustomer.IngredientsCount) return;
 
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         transform.Translate(mousePosition);
@@ -113,7 +113,7 @@ public class Cooking : MonoBehaviour, IBeginDragHandler, IDragHandler, IDropHand
 
     public void OnDrop(PointerEventData eventData)
     {
-        if (!GameManager.Instance.GameStarted) return;
+        if (!GameManager.Instance.GameStarted || IngredientsInPot.Count != GameManager.Instance.ActiveCustomer.IngredientsCount) return;
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector3.back);
 
